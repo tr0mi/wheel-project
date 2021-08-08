@@ -1,0 +1,68 @@
+body {
+  background-size: cover;
+  background-color: rgb(60, 255, 0);
+  margin: 0;
+}
+.wheelStandard {
+  position: absolute;
+  left: 300px;
+  font-size: 30px;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 500px;
+}
+.wheelButtons {
+  position: absolute;
+  top: 0px;
+  left: 300px;
+  font-size: 30px;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 500px;
+  opacity: 0;
+}
+.Pedals {
+  position: absolute;
+  top: 600px;
+  left: 350px;
+  font-size: 30px;
+  background-repeat: no-repeat;
+  height: auto;
+  width: 400px;
+}
+.Gas {
+  position: absolute;
+  top: 520px;
+  left: 640px;
+  font-size: 30px;
+  width: 4%;
+  height: auto;
+  background-repeat: no-repeat;
+}
+.Brake {
+  position: absolute;
+  top: 530px;
+  left: 500px;
+  font-size: 30px;
+  background-repeat: no-repeat;
+  width: 4%;
+  height: auto;
+}
+.Clutch {
+  position: absolute;
+  top: 530px;
+  left: 380px;
+  font-size: 30px;
+  background-repeat: no-repeat;
+  width: 4%;
+  height: auto;
+}
+.Shifter {
+  position: absolute;
+  top: 200px;
+  left: -75px;
+  font-size: 30px;
+  background-repeat: no-repeat;
+  height: auto;
+  width: 500px;
+}
