@@ -57,7 +57,7 @@ body {
   width: 4%;
   height: auto;
 }
-.Shifter {
+.shifterBase {
   position: absolute;
   top: 200px;
   left: -75px;
@@ -65,4 +65,14 @@ body {
   background-repeat: no-repeat;
   height: auto;
   width: 500px;
+}
+.Shifter {
+  position: absolute;
+  top: 480px;
+  left: 115px;
+  font-size: 30px;
+  background-repeat: no-repeat;
+  height: auto;
+  width: 120px;
+  transition-duration: 300ms;
 }

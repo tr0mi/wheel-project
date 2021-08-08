@@ -27,10 +27,10 @@ function pollGamepads() {
   }
 }
 
-wheelAxis0 = document.getElementById("axisState0");
-gasInfo = document.getElementById("gasInfo");
-brakeInfo = document.getElementById("brakeInfo");
-clutchInfo = document.getElementById("clutchInfo");
+// wheelAxis0 = document.getElementById("axisState0");
+// gasInfo = document.getElementById("gasInfo");
+// brakeInfo = document.getElementById("brakeInfo");
+// clutchInfo = document.getElementById("clutchInfo");
 
 const downShift = document.getElementById("button5");
 const upShift = document.getElementById("button4");
@@ -44,6 +44,19 @@ const gas = document.getElementById("gas");
 const brake = document.getElementById("brake");
 const clutch = document.getElementById("clutch");
 const wheel = document.getElementById("wheel");
+const shifter = document.getElementById("shifter");
+const button0 = document.getElementById("button0");
+const button1 = document.getElementById("button1");
+const button2 = document.getElementById("button2");
+const button3 = document.getElementById("button3");
+const button15 = document.getElementById("button15");
+const button16 = document.getElementById("button16");
+const button17 = document.getElementById("button17");
+const button18 = document.getElementById("button18");
+const arrow1 = document.getElementById("arrow1");
+const arrow2 = document.getElementById("arrow2");
+const arrow3 = document.getElementById("arrow3");
+const arrow4 = document.getElementById("arrow4");
 
 
 
@@ -80,7 +93,7 @@ function gameLoop() {
   /////////////////////////////////////////// Wheel Rotation /////////////////////////////////////////////
   if (gp.axes[0] >= -1 || gp.axes[0] <= 1) {
     var wheelAngle = gp.axes[0] * 180;
-    wheelAxis0.innerHTML = wheelAngle;
+    // wheelAxis0.innerHTML = wheelAngle;
     wheel.style.transform = 'rotate(' + wheelAngle + 'deg)';
     downShift.style.transform = 'rotate(' + wheelAngle + 'deg)';
     upShift.style.transform = 'rotate(' + wheelAngle + 'deg)';
@@ -96,22 +109,55 @@ function gameLoop() {
   /////////////////////////////////////////// Pedals /////////////////////////////////////////////
   if (gp.axes[2] >= -1 || gp.axes[2] <= 1) {
     var gasPos = (gp.axes[2] - 1) * -50;
-    gasInfo.innerHTML = gasPos;
+    // gasInfo.innerHTML = gasPos;
     gas.style.transform = 'translateY(' + gasPos + 'px)';
   }
   if (gp.axes[5] >= -1 || gp.axes[5] <= 1) {
     var brakePos = (gp.axes[5] - 1) * -50;
-    brakeInfo.innerHTML = brakePos;
+    // brakeInfo.innerHTML = brakePos;
     brake.style.transform = 'translateY(' + brakePos + 'px)';
   }
   if (gp.axes[6] >= -1 || gp.axes[6] <= 1) {
     var clutchPos = (gp.axes[6] - 1) * -50;
-    clutchInfo.innerHTML = clutchPos;
+    // clutchInfo.innerHTML = clutchPos;
     clutch.style.transform = 'translateY(' + clutchPos + 'px)';
   }
 
 
   /////////////////////////////////////////// Shifter Gears /////////////////////////////////////////////
+  switch(true){
+    case buttonPressed(gp.buttons[8]): shifter.style.transform = 'translate(-60px, -50px)'; shifter.style.transitionDuration = "100ms"; break;
+    case buttonPressed(gp.buttons[9]): shifter.style.transform = 'translate(-60px, 50px)'; shifter.style.transitionDuration = "100ms"; break;
+    case buttonPressed(gp.buttons[10]): shifter.style.transform = 'translate(0px, -50px)'; shifter.style.transitionDuration = "100ms"; break;
+    case buttonPressed(gp.buttons[11]): shifter.style.transform = 'translate(0px, 50px)'; shifter.style.transitionDuration = "100ms"; break;
+    case buttonPressed(gp.buttons[12]): shifter.style.transform = 'translate(60px, -50px)'; shifter.style.transitionDuration = "100ms"; break;
+    case buttonPressed(gp.buttons[13]): shifter.style.transform = 'translate(60px, 50px)'; shifter.style.transitionDuration = "100ms"; break;
+    case buttonPressed(gp.buttons[14]): shifter.style.transform = 'translate(60px, 50px)'; shifter.style.transitionDuration = "100ms"; shifter.style.width = '100px'; break;
+    default: shifter.style.transform = 'translateY(' + 0 + 'px)'; shifter.style.width = '120px'; shifter.style.transitionDuration = "300ms"; break;
+  }
+
+
+  /////////////////////////////////////////// Shifter Buttons /////////////////////////////////////////////  
+  if (buttonPressed(gp.buttons[0])) {button0.style.opacity = "1";} else {button0.style.opacity = "0";}
+  if (buttonPressed(gp.buttons[1])) {button1.style.opacity = "1";} else {button1.style.opacity = "0";}
+  if (buttonPressed(gp.buttons[2])) {button2.style.opacity = "1";} else {button2.style.opacity = "0";}
+  if (buttonPressed(gp.buttons[3])) {button3.style.opacity = "1";} else {button3.style.opacity = "0";}
+  if (buttonPressed(gp.buttons[15])) {button15.style.opacity = "1";} else {button15.style.opacity = "0";}
+  if (buttonPressed(gp.buttons[16])) {button16.style.opacity = "1";} else {button16.style.opacity = "0";}
+  if (buttonPressed(gp.buttons[17])) {button17.style.opacity = "1";} else {button17.style.opacity = "0";}
+  if (buttonPressed(gp.buttons[18])) {button18.style.opacity = "1";} else {button18.style.opacity = "0";}
+
+
+  /////////////////////////////////////////// Shifter D-pad /////////////////////////////////////////////  
+  var arrowVal = Math.floor(gp.axes[9] * 100);
+
+  switch(arrowVal) {
+    case -100: arrow1.style.opacity = "1"; break;
+    case 71: arrow2.style.opacity = "1"; break;
+    case 14: arrow3.style.opacity = "1"; break;
+    case -43: arrow4.style.opacity = "1"; break;
+    default: arrow1.style.opacity = "0"; arrow2.style.opacity = "0"; arrow3.style.opacity = "0"; arrow4.style.opacity = "0"; break;
+  }
 
   start = requestAnimationFrame(gameLoop);
 }
