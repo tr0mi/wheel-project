@@ -5,10 +5,10 @@ This project was created using javascript with the purpose of being used as an o
 (fixed all issues of button delay and timeout from previous versions).
 
 ### Access final version at
+
 [https://tr0mi.github.io/wheel-project/](https://tr0mi.github.io/wheel-project/)
 
-
-Set https://tr0mi.github.io/wheel-project/ as a browser source in OBS to use as overlay.
+Set as a browser source in OBS to use as overlay.
 
 
 
