@@ -5,6 +5,6 @@ This project was created using javascript with the purpose of being used as an o
 ### Access final version at
 [https://tr0mi.github.io/wheel-project/](https://tr0mi.github.io/wheel-project/){:target="_blank"}
 
-
+<a href="https://tr0mi.github.io/wheel-project/" target="_blank" rel="noopener"><span>Example Text</span> </a>.
 
 
