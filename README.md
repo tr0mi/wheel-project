@@ -8,4 +8,7 @@ This project was created using javascript with the purpose of being used as an o
 [https://tr0mi.github.io/wheel-project/](https://tr0mi.github.io/wheel-project/)
 
 
+Set https://tr0mi.github.io/wheel-project/ as a browser source in OBS to use as overlay.
+
+
 
