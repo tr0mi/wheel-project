@@ -35,7 +35,7 @@ body {
   top: 520px;
   left: 640px;
   font-size: 30px;
-  width: 4%;
+  width: 75px;
   height: auto;
   background-repeat: no-repeat;
 }
@@ -45,7 +45,7 @@ body {
   left: 500px;
   font-size: 30px;
   background-repeat: no-repeat;
-  width: 4%;
+  width: 75px;
   height: auto;
 }
 .Clutch {
@@ -54,7 +54,7 @@ body {
   left: 380px;
   font-size: 30px;
   background-repeat: no-repeat;
-  width: 4%;
+  width: 75px;
   height: auto;
 }
 .shifterBase {
