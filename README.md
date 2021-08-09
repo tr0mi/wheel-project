@@ -1,3 +1,8 @@
-# g27-wheel-simplified
- A simplified version of the g27 wheel stream overlay
-http://tr0mi.github.io/wheel-project/
+# G27 Racing Wheel overlay for streaming
+
+This project was created using javascript with the purpose of being used as an overlay whilst streaming drving/racing games. The wheels max rotation is set to 180deg. All pedals, gears and buttons are mapped and indicate when pressed.
+
+### Access final version at
+[http://tr0mi.github.io/wheel-project/](https://tr0mi.github.io/wheel-project/)
+
+
