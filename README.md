@@ -4,6 +4,6 @@ This project was created using javascript with the purpose of being used as an o
 
 ### Access final version at
 <a href="https://tr0mi.github.io/wheel-project/" target="_blank">https://tr0mi.github.io/wheel-project/</a>
-[http://tr0mi.github.io/wheel-project/](https://tr0mi.github.io/wheel-project/)
+
 
 
