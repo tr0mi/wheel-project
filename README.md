@@ -11,4 +11,6 @@ This project was created using javascript with the purpose of being used as an o
 Set as a browser source in OBS to use as overlay.
 
 
+### Updated version:
 
+https://github.com/tr0mi/Universal-Wheel-Overlay
